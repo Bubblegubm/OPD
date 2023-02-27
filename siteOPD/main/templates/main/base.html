@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <a class="me-3 py-2 text-dark text-decoration-none" href="/"><ya-tr-span data-index="1-0" data-translated="false" data-source-lang="en" data-target-lang="ru" data-value="About us" data-translation="О нас" data-ch="0" data-type="trSpan">О нас</ya-tr-span></a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="/registration"><ya-tr-span data-index="2-0" data-translated="false" data-source-lang="en" data-target-lang="ru" data-value="Registration" data-translation="Регистрация" data-ch="0" data-type="trSpan">Регистрация</ya-tr-span></a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="/recommendations"><ya-tr-span data-index="2-0" data-translated="false" data-source-lang="en" data-target-lang="ru" data-value="Recommendations" data-translation="Рекоммендации" data-ch="0" data-type="trSpan">Рекоммендации</ya-tr-span></a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="/friends"><ya-tr-span data-index="2-0" data-translated="false" data-source-lang="en" data-target-lang="ru" data-value="Friends" data-translation="Друзья" data-ch="0" data-type="trSpan">Друзья</ya-tr-span></a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="/account"><ya-tr-span data-index="2-0" data-translated="false" data-source-lang="en" data-target-lang="ru" data-value="Account" data-translation="Личный кабинет" data-ch="0" data-type="trSpan">Личный кабинет</ya-tr-span></a>
+      </nav>
+    </div>
+    {% block content %}{% endblock %}
+</body>
+</html>
