@@ -1,0 +1,81 @@
+.logo {
+    position: absolute;
+    /* width: 652px; ?= */
+    width: 652px;
+    height: 72px;
+    left: 114px;
+    top: 88px;
+}
+.backround{
+
+    min-height: 100%;
+    
+    min-width: 640px;
+    
+    width: 100%;
+    
+    height: auto;
+    
+    position: absolute;
+    
+    top: 0;
+    
+    left: 0;
+    
+    /* Определяется размером картинки */
+    
+    @media screen and (max-width: 640px){
+    
+    img.bg {
+    
+    left: 50%;
+    
+    margin-left: -320px;
+    
+    }
+    
+    }
+    
+    }
+.info{
+    position: absolute;
+/* width: 652px;
+height: 688px; */
+left: 114px;
+top: 192px;
+
+}
+.login{
+    position: absolute;
+	/* width: 488px;
+height: 688px; */
+right: 114px;
+top: 192px;
+}
+.frame{
+    display: absolute;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 44px;
+
+position: absolute;
+width: 1251px;
+height: 304px;
+left: 114px;
+top: 960px;
+}
+.buttom1{
+    position: absolute;
+width: 344px;
+height: 312px;
+right: 184px;
+top: 276px;
+}
+
+.high{
+    position: absolute;
+height: 72px;
+right: 114px;
+top: 88px;
+}
