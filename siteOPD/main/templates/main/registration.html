@@ -6,20 +6,9 @@
 
 {% block content %}
     <h1>Регистрация</h1>
-    <form method="post">
+    <form method="post" action="">
         {% csrf_token %}
-        {{ form.name }}<br>
-        {{ form.task }}<br>
-        <button type="submit" class="btn btn-success">Добавить</button>
+        {{ form }}
+        <input type="submit" name="Create User">
     </form>
-    {% if tasks %}
-        {% for el in tasks %}
-            <div>
-               <h3>{{ el.name }}</h3>
-               <p>{{ el.task }}</p>
-            </div>
-        {% endfor %}
-    {% else %}
-        <p>Записей нет</p>
-    {% endif %}
 {% endblock %}

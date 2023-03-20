@@ -6,5 +6,12 @@
 
 {% block content %}
     <h1>Друзья</h1>
-    <p>Здесь будут друзья</p>
+    {% for el in friend%}
+        <div>
+            <p>{{ el.friends_name }}</p>
+            <p>{{ el.friends_sec_name }}</p>
+            <p>{{ el.friends_interests }}</p>
+            <p>{{ el.friends_activity }}</p>
+        </div>
+    {% endfor %}
 {% endblock %}

@@ -1,18 +1,46 @@
-from .models import Task
-from django.forms import ModelForm, TextInput
+from .models import UserInfo, Friends
+from django.forms import ModelForm, TextInput, Select
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 
 
-class TaskForm(ModelForm):
+class CreateUserForm(UserCreationForm):
     class Meta:
-        model = Task
-        fields = ["name", "task"]
+        model = User
+        fields = ['username', 'password1', 'password2']
+
+
+class UserInfoForm(ModelForm):
+    class Meta:
+        model = UserInfo
+        fields = ["user", "user_name", "user_sec_name", "interests", "activity"]
         widgets = {
-            "name": TextInput(attrs={
+            "user": Select,
+            "user_name": TextInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Введите имя'
+                'placeholder': 'Имя пользователя'
             }),
-            "task": TextInput(attrs={
+            "user_sec_name": TextInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Введите описание'
-            })
+                'placeholder': 'Фамилия пользователя'
+            }),
+            "interests": Select
+        }
+
+
+class FriendsInfoForm(ModelForm):
+    class Meta:
+        model = Friends
+        fields = ["friends_name", "friends_sec_name", "friends_interests", "friends_activity"]
+        widgets = {
+            "friends_name": TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Имя пользователя'
+            }),
+            "friends_sec_name": TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Фамилия пользователя'
+            }),
+            "friends_interests": Select,
+            "friends_activity": Select
         }
